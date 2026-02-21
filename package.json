@@ -1,0 +1,16 @@
+{
+  "name": "aitags",
+  "version": "1.0.0",
+  "description": "A WebComponent framework that uses AI to handle implementation and HTML structure to maintain context.",
+  "main": "index.js",
+  "scripts": {
+    "generate:spec": "node bin/generateSpec.mjs",
+    "generate:code": "node bin/generateCode.mjs",
+    "example:generate:spec": "node bin/generateSpec.mjs --root ./example",
+    "example:generate:code": "node bin/generateCode.mjs --root ./example"
+  },
+  "author": "Jason Sperske <jason@sperske.com>",
+  "license": "MIT",
+  "dependencies": {
+  }
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example Page</title>
+    <script src="dist/Chart/tag.mjs" defer type="module"></script>
+    <script src="dist/CodeSample/tag.mjs" defer type="module"></script>
+    <script src="dist/Menu/tag.mjs" defer type="module"></script>
+    <script src="dist/MenuItem/tag.mjs" defer type="module"></script>
+    <script src="dist/RowLayout/tag.mjs" defer type="module"></script>
+    <script src="dist/RowLayoutItem/tag.mjs" defer type="module"></script>
+    <script type="module">
+        // Runs after all deferred module scripts — element is upgraded by this point.
+        document.getElementById('myChart').yLabelFunction = v => v.toFixed(0) + '%';
+    </script>
+    <script>
+        function* generatorData() {
+            let count = 50;
+            while (count > 0) {
+                yield { A: [Math.random() * 20], B: [Math.random() * 60], C: [Math.random() * 100] };
+                count--;
+            }
+        }
+
+        function formatXLabel(i) {
+            return ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'][i % 7];
+        }
+
+        function onCopyHandler(event) {
+            console.log("Code sample copied!", event);
+        }
+    </script>
+    <link rel="stylesheet" href="example.css">
+</head>
+
+<body>
+    <ai-RowLayout>
+        <ai-RowLayoutItem role="navigation" width="200px">
+            <ai-Menu orientation="vertical" label="Example">
+                <ai-MenuItem href="/" label="Home"></ai-MenuItem>
+                <ai-MenuItem href="/about" label="About"></ai-MenuItem>
+                <ai-MenuItem href="/contact" label="Contact"></ai-MenuItem>
+            </ai-Menu>
+        </ai-RowLayoutItem>
+        <ai-RowLayoutItem role="main-content" width="auto">
+            <div>
+                <h1>Welcome to the Example Page</h1>
+                <p>This is a sample page demonstrating the use of AI tags.</p>
+                <p>Notice how the layout adjusts based on the specified widths.</p>
+            </div>
+            <div>
+                <ai-Chart id="myChart" type="line" data-function="*generatorData" series='{"A": "Red", "B": "Blue", "C": "Green"}'
+                    width="auto" height="300px" x-label-function="formatXLabel"></ai-Chart>
+                <ai-CodeSample language="javascript" onCopy="onCopyHandler">
+function* generatorData() {
+    let count = 10;
+    while (count > 0) {
+        yield {
+            A: [Math.random() * 20],
+            B: [Math.random() * 60],
+            C: [Math.random() * 100]
+        };
+        count--;
+    }
+}
+                </ai-CodeSample>
+            </div>
+        </ai-RowLayoutItem>
+    </ai-RowLayout>
+</body>
+
+</html>

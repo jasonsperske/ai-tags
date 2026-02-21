@@ -1,0 +1,5 @@
+code_tool=claude
+claude_system_prompt=You are an expert Web Components developer. Generate clean, standards-compliant JavaScript...
+output_format=js-webComponent
+output_dir_spec=components
+output_dir_code=dist

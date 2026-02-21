@@ -1,0 +1,5 @@
+# Ignore generated specs to see how the tool generates them as a starting point for customization
+components/
+
+# Ignore built distribution files
+dist/

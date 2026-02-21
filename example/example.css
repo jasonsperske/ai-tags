@@ -1,0 +1,22 @@
+/* You can target ai-ColumnLayout and ai-ColumnLayoutItem elements here */
+ai-RowLayout {
+    gap: 10px;
+}
+
+ai-RowLayoutItem {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+}
+ai-chart {
+    --chart-series-A: rgba(255, 99, 132, 1);
+    --chart-series-B: rgba(54, 162, 235, 1);
+    --chart-series-C: rgb(66, 190, 9);
+    --chart-label-step: 5;
+}
+
+@media (max-width: 700px) {
+    ai-chart {
+        --chart-label-step: 25;
+    }
+}
