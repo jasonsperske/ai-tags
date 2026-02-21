@@ -68,3 +68,5 @@ Examples
 --------
 
 In the `example` directory you can find examples of pages that define a mixture of tags. Run `npm run example:generate:spec` to generate specs for each tag found in the HTML files, then run `npm run example:generate:code` to see how your LLM coding agent processes these tags. WebComponents are imported in HTML as JavaScript modules, but they can also be packaged as React Components or any other runtime that your LLM can generate code for. To see the examples running, open `example/index.html` in a web browser. This is not how these components would typically run in a production environment.
+
+<img width="815" height="611" alt="Screenshot of Example Page" src="https://github.com/user-attachments/assets/b2354f18-da4f-4173-9705-0e25ae48900b" />
