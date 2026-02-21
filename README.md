@@ -60,8 +60,12 @@ How to define a tag
 5. Import the generated components in your HTML:
 
    ```html
-   <script src="dist/ColumnLayout/tag.mjs" defer></script>
-   <script src="dist/ColumnLayoutItem/tag.mjs" defer></script>
+   <script src="dist/Chart/tag.mjs" defer type="module"></script>
+   <script src="dist/CodeSample/tag.mjs" defer type="module"></script>
+   <script src="dist/Menu/tag.mjs" defer type="module"></script>
+   <script src="dist/MenuItem/tag.mjs" defer type="module"></script>
+   <script src="dist/RowLayout/tag.mjs" defer type="module"></script>
+   <script src="dist/RowLayoutItem/tag.mjs" defer type="module"></script>
    ```
 
 Examples
