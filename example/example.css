@@ -1,9 +1,9 @@
-/* You can target ai-ColumnLayout and ai-ColumnLayoutItem elements here */
-ai-RowLayout {
+/* You can target ai-column-layout and ai-column-layout-item elements here */
+ai-row-layout {
     gap: 10px;
 }
 
-ai-RowLayoutItem {
+ai-row-layout-item {
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 10px;

@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Example Page</title>
-    <script src="dist/Chart/tag.mjs" defer type="module"></script>
-    <script src="dist/CodeSample/tag.mjs" defer type="module"></script>
-    <script src="dist/Menu/tag.mjs" defer type="module"></script>
-    <script src="dist/MenuItem/tag.mjs" defer type="module"></script>
-    <script src="dist/RowLayout/tag.mjs" defer type="module"></script>
-    <script src="dist/RowLayoutItem/tag.mjs" defer type="module"></script>
+    <script src="dist/chart/tag.mjs" defer type="module"></script>
+    <script src="dist/code-sample/tag.mjs" defer type="module"></script>
+    <script src="dist/menu/tag.mjs" defer type="module"></script>
+    <script src="dist/menu-item/tag.mjs" defer type="module"></script>
+    <script src="dist/row-layout/tag.mjs" defer type="module"></script>
+    <script src="dist/row-layout-item/tag.mjs" defer type="module"></script>
     <script type="module">
         // Runs after all deferred module scripts — element is upgraded by this point.
         document.getElementById('myChart').yLabelFunction = v => v.toFixed(0) + '%';
@@ -36,24 +36,24 @@
 </head>
 
 <body>
-    <ai-RowLayout>
-        <ai-RowLayoutItem role="navigation" width="200px">
-            <ai-Menu orientation="vertical" label="Example">
-                <ai-MenuItem href="/" label="Home"></ai-MenuItem>
-                <ai-MenuItem href="/about" label="About"></ai-MenuItem>
-                <ai-MenuItem href="/contact" label="Contact"></ai-MenuItem>
-            </ai-Menu>
-        </ai-RowLayoutItem>
-        <ai-RowLayoutItem role="main-content" width="auto">
+    <ai-row-layout>
+        <ai-row-layout-item role="navigation" width="200px">
+            <ai-menu orientation="vertical" label="Example">
+                <ai-menu-item href="/" label="Home"></ai-menu-item>
+                <ai-menu-item href="/about" label="About"></ai-menu-item>
+                <ai-menu-item href="/contact" label="Contact"></ai-menu-item>
+            </ai-menu>
+        </ai-row-layout-item>
+        <ai-row-layout-item role="main-content" width="auto">
             <div>
                 <h1>Welcome to the Example Page</h1>
                 <p>This is a sample page demonstrating the use of AI tags.</p>
                 <p>Notice how the layout adjusts based on the specified widths.</p>
             </div>
             <div>
-                <ai-Chart id="myChart" type="line" data-function="*generatorData" series='{"A": "Red", "B": "Blue", "C": "Green"}'
-                    width="auto" height="300px" x-label-function="formatXLabel"></ai-Chart>
-                <ai-CodeSample language="javascript" onCopy="onCopyHandler">
+                <ai-chart id="myChart" type="line" data-function="*generatorData" series='{"A": "Red", "B": "Blue", "C": "Green"}'
+                    width="auto" height="300px" x-label-function="formatXLabel"></ai-chart>
+                <ai-code-sample language="javascript" onCopy="onCopyHandler">
 function* generatorData() {
     let count = 10;
     while (count > 0) {
@@ -65,10 +65,10 @@ function* generatorData() {
         count--;
     }
 }
-                </ai-CodeSample>
+                </ai-code-sample>
             </div>
-        </ai-RowLayoutItem>
-    </ai-RowLayout>
+        </ai-row-layout-item>
+    </ai-row-layout>
 </body>
 
 </html>
