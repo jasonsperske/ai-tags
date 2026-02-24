@@ -40,15 +40,15 @@ The generate commands read a local configuration file to determine how to genera
 How to define a tag
 -------------------
 
-1. In any HTML file, add a tag with the following namespace `<ai-[TagName]>` and any parameters that this tag will need. For example:
+1. In any HTML file, add a tag with the following namespace `<ai-[tag-name]>` and any parameters that this tag will need. For example:
 
    ```html
-   <ai-ColumnLayout>
-     <ai-ColumnLayoutItem role="navigation" width="200px"></ai-ColumnLayoutItem>
-     <ai-ColumnLayoutItem role="main-content" width="auto">
+   <ai-row-layout>
+     <ai-row-layout-item role="navigation" width="200px"></ai-row-layout-item>
+     <ai-row-layout-item role="main-content" width="auto">
        <h1>Content</h1>
-     </ai-ColumnLayoutItem>
-   </ai-ColumnLayout>
+     </ai-row-layout-item>
+   </ai-row-layout>
    ```
 
 2. Run `npm run generate:spec` to scan your HTML files and create component specs. This creates a `SPEC.md` and `README.md` for each discovered tag in your `output_dir_spec` (default: `components`).
@@ -60,12 +60,8 @@ How to define a tag
 5. Import the generated components in your HTML:
 
    ```html
-   <script src="dist/Chart/tag.mjs" defer type="module"></script>
-   <script src="dist/CodeSample/tag.mjs" defer type="module"></script>
-   <script src="dist/Menu/tag.mjs" defer type="module"></script>
-   <script src="dist/MenuItem/tag.mjs" defer type="module"></script>
-   <script src="dist/RowLayout/tag.mjs" defer type="module"></script>
-   <script src="dist/RowLayoutItem/tag.mjs" defer type="module"></script>
+   <script src="dist/row-layout/tag.mjs" defer type="module"></script>
+   <script src="dist/row-layoutItem/tag.mjs" defer type="module"></script>
    ```
 
 Examples
